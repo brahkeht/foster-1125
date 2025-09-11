@@ -7,13 +7,14 @@ import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Suspense } from "react"
 import { brandConfig } from "@/config/brand-config"
+import ChatButton from "@/components/chat-button"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: `${brandConfig.name} | Digital Security Agency`,
   description: brandConfig.description,
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Header />
           <Suspense fallback={<div className="min-h-screen bg-black" />}>{children}</Suspense>
           <Footer />
+          <ChatButton />
         </ThemeProvider>
       </body>
     </html>

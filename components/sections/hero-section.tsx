@@ -11,132 +11,14 @@ export function HeroSection() {
   const heroBackgroundY = useTransform(scrollY, [0, 500], [0, -50])
 
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Matrix-style background */}
+    <section className="relative min-h-[80vh] overflow-hidden">
+      {/* Background gradient (lighter, cheaper) */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/30 to-black"></div>
-
-        {/* Animated matrix rain */}
-        <div className="absolute inset-0 opacity-20">
-          {Array.from({ length: 50 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute text-green-400 text-xs font-mono animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
-              }}
-            >
-              {Math.random().toString(36).substring(2, 15)}
-            </div>
-          ))}
-        </div>
-
-        {/* Glitch overlay */}
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-5"></div>
-
-        {/* Animated circuit lines */}
-        <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1920 1080">
-          <defs>
-            <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.8" />
-              <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.4" />
-            </linearGradient>
-          </defs>
-
-          {/* Animated circuit paths */}
-          <motion.path
-            d="M0,200 L300,200 L300,400 L600,400 L600,600 L900,600"
-            stroke="url(#circuitGradient)"
-            strokeWidth="2"
-            fill="none"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 3, delay: 1, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
-          />
-          <motion.path
-            d="M1920,300 L1600,300 L1600,500 L1300,500 L1300,700 L1000,700"
-            stroke="url(#circuitGradient)"
-            strokeWidth="2"
-            fill="none"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 3, delay: 2, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
-          />
-
-          {/* Circuit nodes */}
-          <motion.circle
-            cx="300"
-            cy="200"
-            r="4"
-            fill="#8b5cf6"
-            initial={{ scale: 0 }}
-            animate={{ scale: [0, 1.5, 1] }}
-            transition={{ duration: 2, delay: 1.5, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
-          />
-          <motion.circle
-            cx="600"
-            cy="400"
-            r="4"
-            fill="#3b82f6"
-            initial={{ scale: 0 }}
-            animate={{ scale: [0, 1.5, 1] }}
-            transition={{ duration: 2, delay: 2.5, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
-          />
-        </svg>
-
-        {/* Floating security icons */}
-        <div className="absolute inset-0">
-          <motion.div
-            className="absolute top-1/4 left-1/6 text-purple-500/30"
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 5, -5, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, delay: 0 }}
-          >
-            <Shield className="h-8 w-8" />
-          </motion.div>
-
-          <motion.div
-            className="absolute top-1/3 right-1/4 text-blue-500/30"
-            animate={{
-              y: [0, 15, 0],
-              rotate: [0, -5, 5, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
-          >
-            <Lock className="h-6 w-6" />
-          </motion.div>
-
-          <motion.div
-            className="absolute bottom-1/3 left-1/3 text-purple-400/30"
-            animate={{
-              y: [0, -10, 0],
-              x: [0, 10, 0],
-              opacity: [0.3, 0.7, 0.3],
-            }}
-            transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, delay: 2 }}
-          >
-            <Code className="h-7 w-7" />
-          </motion.div>
-        </div>
-
-        {/* Scanning line effect */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/20 to-transparent h-2"
-          animate={{ y: [0, typeof window !== "undefined" ? window.innerHeight : 1080, 0] }}
-          transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black"></div>
       </div>
 
       {/* Hero content */}
-      <div className="container relative z-10 mx-auto px-4 h-full flex flex-col justify-center">
+      <div className="container relative z-10 mx-auto px-4 py-12 flex flex-col justify-center">
         <motion.div className="max-w-4xl">
           {/* Glitch effect badge */}
           <motion.div

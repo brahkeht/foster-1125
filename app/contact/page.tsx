@@ -6,6 +6,10 @@ import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, CheckCircle } from "lucide-react"
 import { PageHero } from "@/components/sections/page-hero"
 import { brandConfig } from "@/config/brand-config"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
 
 interface ContactInfoItemProps {
   icon: React.ReactNode
@@ -39,8 +43,6 @@ export default function ContactPage() {
       setIsSubmitting(false)
     }, 1000)
   }
-
-  const faqs = brandConfig.faq
 
   return (
     <main className="pt-24 bg-black text-white">
@@ -104,5 +106,53 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">\
-                      <div>\
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="firstName">First Name</Label>
+                        <Input id="firstName" name="firstName" placeholder="Jane" required />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="lastName">Last Name</Label>
+                        <Input id="lastName" name="lastName" placeholder="Doe" required />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Email</Label>
+                        <Input id="email" name="email" type="email" placeholder="you@example.com" required />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Phone</Label>
+                        <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="subject">Subject</Label>
+                      <Input id="subject" name="subject" placeholder="How can we help?" />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea id="message" name="message" placeholder="Tell us about your issue..." required rows={5} />
+                    </div>
+
+                    <div className="flex items-center justify-between pt-2">
+                      <p className="text-xs text-gray-400">
+                        We typically respond within 24 hours.
+                      </p>
+                      <Button type="submit" disabled={isSubmitting} className="bg-purple-600 hover:bg-purple-700">
+                        {isSubmitting ? "Sending..." : "Send Message"}
+                      </Button>
+                    </div>
+                  </form>
+                )}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}

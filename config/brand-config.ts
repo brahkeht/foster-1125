@@ -1,10 +1,21 @@
-import { Shield, Lock, Users, Code, Award, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import {
+  Shield,
+  Lock,
+  Users,
+  Code,
+  Award,
+  Facebook,
+  Twitter,
+  Instagram,
+  MessageCircle,
+} from "lucide-react";
 
 export const brandConfig = {
   // Brand Identity
-  name: "Random Brand",
+  name: "Bencyber 100",
   tagline: "NO ACTUAL TAGLINE",
-  description: "Specialized in digital asset recovery with industry-leading success rates and cutting-edge technology.",
+  description:
+    "Specialized in digital asset recovery with industry-leading success rates and cutting-edge technology.",
 
   // Brand Colors (Tailwind classes)
   colors: {
@@ -26,7 +37,7 @@ export const brandConfig = {
   // Contact Information
   contact: {
     email: "contact@securerecover.com",
-    phone: "+1 (555) 123-4567",
+    phone: "+1 (626) 664‑7065",
     address: "123 Security Street, Cyber City, CS 12345",
   },
 
@@ -47,14 +58,14 @@ export const brandConfig = {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "#",
+      url: "https://www.instagram.com/bencyber1008?igsh=dWdzN243cG5zam10&utm_source=qr",
       label: "Instagram",
     },
     {
-      name: "LinkedIn",
-      icon: Linkedin,
-      url: "#",
-      label: "LinkedIn",
+      name: "Whatsapp",
+      icon: MessageCircle,
+      url: "https://wa.link/5d82h9",
+      label: "Whatsapp",
     },
   ],
 
@@ -199,22 +210,26 @@ export const brandConfig = {
     {
       icon: Shield,
       title: "Security",
-      description: "We maintain the highest standards of security and confidentiality in all our operations.",
+      description:
+        "We maintain the highest standards of security and confidentiality in all our operations.",
     },
     {
       icon: Users,
       title: "Integrity",
-      description: "We operate with complete transparency and honesty in all client interactions.",
+      description:
+        "We operate with complete transparency and honesty in all client interactions.",
     },
     {
       icon: Award,
       title: "Excellence",
-      description: "We strive for perfection in every recovery case we undertake.",
+      description:
+        "We strive for perfection in every recovery case we undertake.",
     },
     {
       icon: Code,
       title: "Efficiency",
-      description: "We value your time and work diligently to complete recoveries as quickly as possible.",
+      description:
+        "We value your time and work diligently to complete recoveries as quickly as possible.",
     },
   ],
 
@@ -223,17 +238,20 @@ export const brandConfig = {
     {
       step: "01",
       title: "Initial Assessment",
-      description: "We analyze your specific situation and determine the most effective recovery approach.",
+      description:
+        "We analyze your specific situation and determine the most effective recovery approach.",
     },
     {
       step: "02",
       title: "Strategic Planning",
-      description: "Our experts develop a customized recovery strategy tailored to your specific case.",
+      description:
+        "Our experts develop a customized recovery strategy tailored to your specific case.",
     },
     {
       step: "03",
       title: "Execution",
-      description: "Using proprietary tools and techniques, we implement the recovery process with precision.",
+      description:
+        "Using proprietary tools and techniques, we implement the recovery process with precision.",
     },
     {
       step: "04",
@@ -292,6 +310,6 @@ export const brandConfig = {
     { icon: Lock, text: "Zero-Log Policy" },
     { icon: Award, text: "ISO 27001 Certified" },
   ],
-}
+};
 
-export type BrandConfig = typeof brandConfig
+export type BrandConfig = typeof brandConfig;
