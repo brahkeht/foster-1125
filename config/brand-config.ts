@@ -36,9 +36,9 @@ export const brandConfig = {
 
   // Contact Information
   contact: {
-    email: "contact@securerecover.com",
+    email: "",
     phone: "+1 (626) 664‑7065",
-    address: "123 Security Street, Cyber City, CS 12345",
+    address: "",
   },
 
   // Social Media
