@@ -58,15 +58,6 @@ export default function Header() {
               </Link>
             ))}
 
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="border-red-500/50 text-red-300 hover:bg-red-950/50 hover:border-red-400 transition-colors"
-              >
-                Request Help
-              </Button>
-            </Link>
-
             <Button
               className={`bg-${brandConfig.colors.primary} hover:bg-${brandConfig.colors.primaryHover} text-white`}
             >

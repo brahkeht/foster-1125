@@ -33,7 +33,7 @@ export function HeroSection() {
                 animate={{ x: ["-100%", "100%"] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
               />
-              <span className="text-sm font-medium text-purple-300 relative z-10">🔒 {brandConfig.tagline}</span>
+              <span className="text-sm font-medium text-purple-300 relative z-10">{brandConfig.tagline}</span>
             </div>
           </motion.div>
 
@@ -85,7 +85,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="mb-8 font-mono text-lg md:text-xl text-green-400"
           >
-            <span className="text-gray-500">root@securerecover:~$ </span>
+            {/* <span className="text-gray-500">root@securerecover:~$ </span>
             <motion.span
               initial={{ width: 0 }}
               animate={{ width: "auto" }}
@@ -93,12 +93,12 @@ export function HeroSection() {
               className="inline-block overflow-hidden"
             >
               Recovering what others can't access...
-            </motion.span>
-            <motion.span
+            </motion.span> */}
+            {/* <motion.span
               animate={{ opacity: [1, 0] }}
               transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY }}
               className="inline-block w-2 h-5 bg-green-400 ml-1"
-            />
+            /> */}
           </motion.div>
 
           {/* Description */}
@@ -205,23 +205,6 @@ export function HeroSection() {
             />
           </div>
         </motion.div>
-      </motion.div>
-
-      {/* Threat detection overlay */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 0.3, 0] }}
-        transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, repeatDelay: 5 }}
-        className="absolute top-4 right-4 bg-red-900/20 border border-red-500/30 rounded-lg p-3 backdrop-blur-sm"
-      >
-        <div className="flex items-center text-red-400 text-sm font-mono">
-          <motion.div
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
-            className="w-2 h-2 bg-red-500 rounded-full mr-2"
-          />
-          THREAT DETECTED
-        </div>
       </motion.div>
     </section>
   )

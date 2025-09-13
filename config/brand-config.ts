@@ -13,7 +13,7 @@ import {
 export const brandConfig = {
   // Brand Identity
   name: "Bencyber 100",
-  tagline: "NO ACTUAL TAGLINE",
+  tagline: "Cyber Tech Professionals",
   description:
     "Specialized in digital asset recovery with industry-leading success rates and cutting-edge technology.",
 
@@ -38,7 +38,8 @@ export const brandConfig = {
   contact: {
     email: "",
     phone: "+1 (626) 664‑7065",
-    address: "",
+    address:
+      "30723 Kovacek Dale, North Timothytown, CA 36572-532730723 Kovacek Dale, North Timothytown, CA 36572-5327",
   },
 
   // Social Media
