@@ -39,7 +39,7 @@ export const brandConfig = {
     email: "",
     phone: "+1 (626) 664‑7065",
     address:
-      "30723 Kovacek Dale, North Timothytown, CA 36572-532730723 Kovacek Dale, North Timothytown, CA 36572-5327",
+      "Temecula, CA, United States",
   },
 
   // Social Media
