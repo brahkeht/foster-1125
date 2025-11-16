@@ -12,7 +12,7 @@ import {
 
 export const brandConfig = {
   // Brand Identity
-  name: "Bencyber 100",
+  name: "Foster Cyber2",
   tagline: "Cyber Tech Professionals",
   description:
     "Specialized in digital asset recovery with industry-leading success rates and cutting-edge technology.",
